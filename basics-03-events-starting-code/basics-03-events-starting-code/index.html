@@ -35,6 +35,7 @@
       <p>Your Name : {{name + ' ' + 'Park'}}</p>
       <!-- counter가 바뀔때마다 binding되지 않은 method(outputFullname)이 실행된다 -->
       <p>Your Name : {{fullname}}</p>
+      <input type="text" v-model="lastName" />
       <form v-on:submit.prevent="submitForm">
         <input type="text" />
         <button>Sign Up</button>
