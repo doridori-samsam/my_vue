@@ -1,8 +1,8 @@
 const app = Vue.createApp({
   data() {
     return {
-      currentUserInput: '',
-      message: 'Vue is great!',
+      currentUserInput: "",
+      message: "Vue is great!",
     };
   },
   methods: {
@@ -15,4 +15,14 @@ const app = Vue.createApp({
   },
 });
 
-app.mount('#app');
+const app2 = Vue.createApp({
+  template: `<p>{{favoriteMeal}}</p>`,
+  data() {
+    return {
+      favoriteMeal: "Pizza",
+    };
+  },
+});
+
+app.mount("#app");
+app2.mount("#app2");
