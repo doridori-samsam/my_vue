@@ -14,6 +14,28 @@ const app = Vue.createApp({
       //console.dir(this.$refs.userText);
     },
   },
+  beforeCreate() {
+    console.log("before create!");
+    //http request to server, timer.... anything you need to do.
+  },
+  created() {
+    console.log("created!");
+  },
+  beforeMount() {
+    console.log("before mount!");
+  },
+  mounted() {
+    console.log("mounted!");
+  },
+  beforeUpdate() {
+    console.log("before update!");
+  },
+  updated() {
+    console.log("updated!");
+  },
+  unmounted() {
+    console.log("unmounted!");
+  },
 });
 
 const app2 = Vue.createApp({
@@ -26,4 +48,9 @@ const app2 = Vue.createApp({
 });
 
 app.mount("#app");
+
+setTimeout(function () {
+  app.unmount();
+}, 3000);
+
 app2.mount("#app2");
